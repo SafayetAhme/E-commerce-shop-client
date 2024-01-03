@@ -6,7 +6,7 @@ import { FaUserPlus } from "react-icons/fa";
 
 const User = () => {
 
-    const user = false;
+    const user = true;
 
     return <div>
 
@@ -29,8 +29,8 @@ const User = () => {
                     </div>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                         <p className="text-center my-3 font-semibold">{user?.displayName}</p>
-                        <Link className="mb-3 text-center text-primary hover:underline font-medium" to="/dashboard">Dashboard</Link>
-                        <button  className="w-full bg-red-600 rounded-lg font-semibold btn hover:text-black text-white py-2">Sign out</button>
+                        <Link className="mb-3 text-center border py-2 text-black  hover:bg-black hover:text-white font-medium" to="userdashboard">My Profile</Link>
+                        <button className="mb-3 text-center border py-2 text-black  hover:bg-red-500 hover:text-white font-medium">Sign out</button>
                     </ul>
                 </div>
 

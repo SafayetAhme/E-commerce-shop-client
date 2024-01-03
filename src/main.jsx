@@ -15,6 +15,15 @@ import Shop from './component/page/shop/Shop.jsx';
 import Blog from './component/page/blog/Blog.jsx';
 import AboutUs from './component/page/aboutus/AboutUs.jsx';
 import ConTact from './component/page/contact/ConTact.jsx';
+import UserDashboard from './component/page/userdashboard/UserDashboard.jsx';
+import UserProfile from './component/page/userdashboard/UserProfile.jsx';
+import UserInformation from './component/page/userdashboard/UserInformation.jsx';
+import UserPassword from './component/page/userdashboard/UserPassword.jsx';
+import AdminDashboard from './component/page/admindashboard/AdminDashboard.jsx';
+import AdminHome from './component/page/admindashboard/AdminHome.jsx';
+import PaymentHistory from './component/page/admindashboard/PaymentHistory.jsx';
+import AllUser from './component/page/admindashboard/AllUser.jsx';
+import ManageItems from './component/page/admindashboard/ManageItems.jsx';
 
 
 
@@ -57,6 +66,53 @@ const router = createBrowserRouter([
       }
     ]
   },
+
+  // user related dahsboard
+  {
+    path: "userdashboard",
+    element: <UserDashboard></UserDashboard>,
+    children: [
+      {
+        path: "userprofile",
+        element: <UserProfile></UserProfile>
+      },
+      {
+        path: "userinfo",
+        element: <UserInformation></UserInformation>
+      },
+      {
+        path: "userpassword",
+        element: <UserPassword></UserPassword>
+      }
+    ]
+  },
+
+
+  // admin related dahsboard
+  {
+    path: "adminDashboard",
+    element: <AdminDashboard></AdminDashboard>,
+    children: [
+      {
+        path: "adminhome",
+        element: <AdminHome></AdminHome>
+      },
+      {
+        path: "paymenthhistory",
+        element: <PaymentHistory></PaymentHistory>
+      },
+      {
+        path: "alluser",
+        element: <AllUser></AllUser>
+      },
+      {
+        path: "manageitem",
+        element: <ManageItems></ManageItems>
+      },
+    ]
+  }
+
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

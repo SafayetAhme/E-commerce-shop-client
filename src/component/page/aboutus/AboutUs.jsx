@@ -2,6 +2,10 @@ import { Link } from "react-router-dom"
 import banner from "../../../../public/image/banner.png"
 import metting from "../../../../public/image/metting.png"
 import store from "../../../../public/image/store.png"
+import member1 from "../../../../public/image/member1.png"
+import member2 from "../../../../public/image/member2.png"
+import member3 from "../../../../public/image/member3.png"
+import member4 from "../../../../public/image/member4.png"
 
 
 const AboutUs = () => {
@@ -61,6 +65,35 @@ const AboutUs = () => {
                         <h1 className="font-rubik text-8xl text-gray-300 pt-8">2015</h1>
                     </div>
                     <img src={store} alt="" />
+                </div>
+
+                {/* team member */}
+                <div data-aos="fade-up"
+                    data-aos-anchor-placement="top-center" className="text-center justify-center">
+                    <h1 className="text-4xl font-medium">Our Team</h1>
+                    <p className="pb-8">There are many Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div className="flex justify-center items-center gap-8 pb-8">
+                        <div>
+                            <img className="w-[160px]" src={member1} alt="" />
+                            <p className="text-xl py-1 font-medium">Safayet Ahmed</p>
+                            <p>Team Member</p>
+                        </div>
+                        <div>
+                            <img className="w-[160px]" src={member2} alt="" />
+                            <p className="text-xl py-1 font-medium">Rakibull Hasan</p>
+                            <p>Team Member</p>
+                        </div>
+                        <div>
+                            <img className="w-[160px]" src={member3} alt="" />
+                            <p className="text-xl py-1 font-medium">Yeasing Arafat</p>
+                            <p>Team Member</p>
+                        </div>
+                        <div>
+                            <img className="w-[160px]" src={member4} alt="" />
+                            <p className="text-xl py-1 font-medium">Tanvir Hosain</p>
+                            <p>Team Member</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

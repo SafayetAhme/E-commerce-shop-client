@@ -4,7 +4,7 @@ import banner from "../../../../public/image/banner.png"
 
 const ConTact = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             {/* banner */}
             <div className="text-center mb-8 py-24" style={{ backgroundImage: `url(${banner})` }}>
                 <Link to="/">

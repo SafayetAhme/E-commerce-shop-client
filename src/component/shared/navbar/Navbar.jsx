@@ -9,12 +9,21 @@ import './navbar.css';
 
 const Navbar = () => {
 
+    const isadmin = true;
+
     const navLinks = <>
         <li className='nav-link font-semibold lg:text-black'><NavLink to="/">Home</NavLink></li>
         <li className='nav-link font-semibold lg:text-black'><NavLink to="/shop">Shop</NavLink></li>
         <li className='nav-link font-semibold lg:text-black'><NavLink to="/blog">Blog</NavLink></li>
         <li className='lg:text-black font-semibold nav-link'><NavLink to="/aboutus">About Us</NavLink></li>
         <li className='lg:text-black font-semibold nav-link'><NavLink to="/contact">Contact</NavLink></li>
+        {
+            isadmin ? <>
+                <li className='lg:text-black font-semibold nav-link'><NavLink to="/adminDashboard">Dashboard</NavLink></li>
+            </> : <>
+                {/*  */}
+            </>
+        }
     </>
 
     return (
