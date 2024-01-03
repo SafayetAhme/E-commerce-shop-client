@@ -12,6 +12,9 @@ import Category from './component/page/category/Category.jsx';
 import SignIn from './component/page/sign-in/SignIn.jsx';
 import SignUp from './component/page/sign-up/SignUp.jsx';
 import Shop from './component/page/shop/Shop.jsx';
+import Blog from './component/page/blog/Blog.jsx';
+import AboutUs from './component/page/aboutus/AboutUs.jsx';
+import ConTact from './component/page/contact/ConTact.jsx';
 
 
 
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUs></AboutUs>
+      },
+      {
+        path: "/contact",
+        element: <ConTact></ConTact>
       },
       {
         path: "/category",

@@ -12,19 +12,9 @@ const Navbar = () => {
     const navLinks = <>
         <li className='nav-link font-semibold lg:text-black'><NavLink to="/">Home</NavLink></li>
         <li className='nav-link font-semibold lg:text-black'><NavLink to="/shop">Shop</NavLink></li>
-        <li>
-            <details>
-                <summary className="text-black font-medium">
-                    Products
-                </summary>
-                <ul className="p-2 bg-base-100 rounded-t-none">
-                    <li className='nav-link font-semibold lg:text-black'><NavLink to="/category">Category<Category></Category></NavLink></li>
-                </ul>
-            </details>
-        </li>
         <li className='nav-link font-semibold lg:text-black'><NavLink to="/blog">Blog</NavLink></li>
         <li className='lg:text-black font-semibold nav-link'><NavLink to="/aboutus">About Us</NavLink></li>
-        <li className='lg:text-black font-semibold nav-link'><NavLink to="/aboutus">Contact</NavLink></li>
+        <li className='lg:text-black font-semibold nav-link'><NavLink to="/contact">Contact</NavLink></li>
     </>
 
     return (
