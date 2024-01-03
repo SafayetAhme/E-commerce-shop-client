@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'rubik': ['Rubik', 'sans-serif'],
+        'kapakana': ['kapakana', 'Config'],
+      },
+    },
   },
   plugins: [require("daisyui")],
 }

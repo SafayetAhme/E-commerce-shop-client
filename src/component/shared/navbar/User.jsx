@@ -6,13 +6,12 @@ import { FaUserPlus } from "react-icons/fa";
 
 const User = () => {
 
-    const user = true;
+    const user = false;
 
     return <div>
 
         {
             user ? <div className="flex items-center gap-3">
-
                 <div>
                     <button className="text-lg bg-gray-200 rounded-full p-4"><FaRegHeart /></button>
                 </div>
@@ -21,7 +20,6 @@ const User = () => {
                     <button className="text-lg bg-gray-200 rounded-full p-4"> <FaCartShopping /></button>
                     <span className="badge badge-sm indicator-item">0</span>
                 </div>
-
 
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
@@ -39,8 +37,8 @@ const User = () => {
             </div>
                 :
                 <div>
-                    <NavLink to="/signin" className="lg:text-white font-semibold hidden lg:inline">Sign In</NavLink>
-                    <NavLink to="/signin" className="lg:text-white font-semibold lg:hidden text-2xl"><FaUserPlus /></NavLink>
+                    <NavLink to="/signin" className="lg:text-black font-semibold hidden lg:inline">Sign In</NavLink>
+                    <NavLink to="/signin" className="lg:text-black font-semibold lg:hidden text-2xl"><FaUserPlus /></NavLink>
                 </div>
         }
     </div>
