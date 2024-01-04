@@ -44,25 +44,25 @@ const Hero = () => {
                 <Link to="/shop">
                     <div className="cursor-pointer rounded-md px-4 pt-4 pb-3 w-fit hover:scale-105 transition-all duration-200 border-white shadow">
                         <img className="bg-center rounded-md" src={category2} alt="" />
-                        <h1 className="text-center pt-2 text-xl font-rubik font-bold">Shirt</h1>
+                        <h1 className="text-center pt-2 text-xl font-rubik font-bold">Beg</h1>
                     </div>
                 </Link>
                 <Link to="/shop">
                     <div className="cursor-pointer rounded-md px-4 pt-4 pb-3 w-fit hover:scale-105 transition-all duration-200 border-white shadow">
                         <img className="bg-center rounded-md" src={category3} alt="" />
-                        <h1 className="text-center pt-2 text-xl font-rubik font-bold">Shirt</h1>
+                        <h1 className="text-center pt-2 text-xl font-rubik font-bold">T-shirt</h1>
                     </div>
                 </Link>
                 <Link to="/shop">
                     <div className="cursor-pointer rounded-md px-4 pt-4 pb-3 w-fit hover:scale-105 transition-all duration-200 border-white shadow">
                         <img className="bg-center rounded-md" src={category4} alt="" />
-                        <h1 className="text-center pt-2 text-xl font-rubik font-bold">Shirt</h1>
+                        <h1 className="text-center pt-2 text-xl font-rubik font-bold">hoodi</h1>
                     </div>
                 </Link>
                 <Link to="/shop">
                     <div className="cursor-pointer rounded-md px-4 pt-4 pb-3 w-fit hover:scale-105 transition-all duration-200 border-white shadow">
                         <img className="bg-center rounded-md" src={category5} alt="" />
-                        <h1 className="text-center pt-2 text-xl font-rubik font-bold">Shirt</h1>
+                        <h1 className="text-center pt-2 text-xl font-rubik font-bold">Cap</h1>
                     </div>
                 </Link>
             </div>

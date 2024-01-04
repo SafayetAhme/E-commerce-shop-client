@@ -24,6 +24,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import MenusDetails from './component/page/MenusDetails.jsx/MenusDetails.jsx';
 
 const queryClient = new QueryClient()
 
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/menusdetails/:id",
+        element: <MenusDetails></MenusDetails>,
+        loader: () => fetch('http://localhost:5000/menus')
       },
       {
         path: "/shop",

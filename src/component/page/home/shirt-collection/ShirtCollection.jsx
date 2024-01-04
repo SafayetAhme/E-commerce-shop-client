@@ -22,7 +22,9 @@ const ShirtCollection = () => {
                 {
                     shirt.map(item =>
                         <div key={item.id}>
-                            <img className="w-full rounded-xl" src={item.image} alt="" />
+                            <Link to={`/menusdetails/${item._id}`}>
+                                <img className="w-full rounded-xl" src={item.image} alt="" />
+                            </Link>
                             <div>
                                 <h1 className="text-xl font-bold">{item.name}</h1>
                                 <div className="flex items-center justify-between">
