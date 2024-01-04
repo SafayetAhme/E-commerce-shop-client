@@ -4,9 +4,12 @@ import { IoMdMenu } from "react-icons/io";
 import { CgMenuGridR } from "react-icons/cg";
 import { LuShoppingCart } from "react-icons/lu";
 import { Rating } from "@mui/material";
+import UseMenus from "../../hooks/UseMenus";
 
 
 const Shop = () => {
+    const [menus] = UseMenus();
+
     return (
         <div className="container mx-auto">
             <div className="text-center py-24" style={{ backgroundImage: `url(${banner})` }}>
@@ -107,25 +110,29 @@ const Shop = () => {
                     <div>
                         <div data-aos="fade-up"
                             data-aos-anchor-placement="top-center" className="grid pt-6 md:grid-cols-3 gap-6 pb-14 items-center">
-                            <div className="">
-                                <img className="w-full rounded-xl" src="https://i.ibb.co/7vW1PBM/category1.png" alt="" />
-                                <div>
-                                    <h1 className="text-xl font-bold">Name Name Name Name</h1>
-                                    <div className="flex pt-2 pb-1 justify-between">
-                                        <h2 className="card-title">
-                                            <Rating style={{ maxWidth: 115 }}
-                                                value={""}
-                                                readOnly />
-                                        </h2>
-                                    </div>
-                                    <div className="flex items-center justify-between">
-                                        <h1 className="text-lg font-bold">Price</h1>
-                                        <div className=" bg-[#edededb1] p-3 rounded-full left-14 ">
-                                            <LuShoppingCart />
+                            {
+                                menus.map(item =>
+                                    <div className="">
+                                        <img className="w-full rounded-xl" src={item.image} alt="" />
+                                        <div>
+                                            <h1 className="text-xl font-bold">{item.name}</h1>
+                                            <div className="flex pt-2 pb-1 justify-between">
+                                                <h2 className="card-title">
+                                                    <Rating style={{ maxWidth: 115 }}
+                                                        value={item.ratting}
+                                                        readOnly />
+                                                </h2>
+                                            </div>
+                                            <div className="flex items-center justify-between">
+                                                <h1 className="text-lg font-bold">{item.price}</h1>
+                                                <div className=" bg-[#edededb1] p-3 rounded-full left-14 ">
+                                                    <LuShoppingCart />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                )
+                            }
                         </div>
 
                         {/* pagination */}

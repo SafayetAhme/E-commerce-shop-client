@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom"
-import cap from "../../../../../public/image/cap.png"
+import cappp from "../../../../../public/image/cappp.png"
 import { LuShoppingCart } from "react-icons/lu"
+import UseMenus from "../../../hooks/UseMenus";
 
 
 const CapCollection = () => {
+    const [menus] = UseMenus();
+    const cap = menus.filter(item => item.category === 'cap');
+
     return (
         <div data-aos="fade-up"
             data-aos-anchor-placement="top-center" className="px-12">
@@ -15,59 +19,30 @@ const CapCollection = () => {
             </div>
 
             <div className="grid md:grid-cols-4 gap-6">
-                <div className="rounded-xl col-span-2 bg-no-repeat w-full" style={{ backgroundImage: `url(${cap})` }}>
+                <div className="rounded-xl col-span-2 bg-no-repeat w-full" style={{ backgroundImage: `url(${cappp})` }}>
                     <h1 className="font-rubik text-6xl text-white p-4">Customer <br /> <span className="text-6xl font-bold">100% <br /> satisfaction</span> </h1>
                 </div>
 
                 <div className="col-span-2  grid md:grid-cols-2 gap-6 items-center">
-                    <div className="">
-                        <img className="w-full rounded-xl" src="https://i.ibb.co/7vW1PBM/category1.png" alt="" />
-                        <div>
-                            <h1 className="text-xl font-bold">Name Name Name Name</h1>
-                            <div className="flex items-center justify-between">
-                                <h1 className="text-lg font-bold">Price</h1>
-                                <div className=" bg-[#edededb1] p-3 rounded-full left-14 ">
-                                    <LuShoppingCart />
+
+                    {
+                        cap.map(item =>
+
+                            <div key={item.id} className="">
+                                <img className="w-full h-[284px] rounded-xl" src={item.image} alt="" />
+                                <div>
+                                    <h1 className="text-xl font-bold">{item.name}</h1>
+                                    <div className="flex items-center justify-between">
+                                        <h1 className="text-lg font-bold">${item.price}</h1>
+                                        <div className=" bg-[#edededb1] p-3 rounded-full left-14 ">
+                                            <LuShoppingCart />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="">
-                        <img className="w-full rounded-xl" src="https://i.ibb.co/7vW1PBM/category1.png" alt="" />
-                        <div>
-                            <h1 className="text-xl font-bold">Name Name Name Name</h1>
-                            <div className="flex items-center justify-between">
-                                <h1 className="text-lg font-bold">Price</h1>
-                                <div className=" bg-[#edededb1] p-3 rounded-full left-14 ">
-                                    <LuShoppingCart />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="">
-                        <img className="w-full rounded-xl" src="https://i.ibb.co/7vW1PBM/category1.png" alt="" />
-                        <div>
-                            <h1 className="text-xl font-bold">Name Name Name Name</h1>
-                            <div className="flex items-center justify-between">
-                                <h1 className="text-lg font-bold">Price</h1>
-                                <div className=" bg-[#edededb1] p-3 rounded-full left-14 ">
-                                    <LuShoppingCart />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="">
-                        <img className="w-full rounded-xl" src="https://i.ibb.co/7vW1PBM/category1.png" alt="" />
-                        <div>
-                            <h1 className="text-xl font-bold">Name Name Name Name</h1>
-                            <div className="flex items-center justify-between">
-                                <h1 className="text-lg font-bold">Price</h1>
-                                <div className=" bg-[#edededb1] p-3 rounded-full left-14 ">
-                                    <LuShoppingCart />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    }
+
                 </div>
             </div>
         </div>
