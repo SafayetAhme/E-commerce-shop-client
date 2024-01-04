@@ -1,4 +1,10 @@
 import React from 'react'
+import instagram1 from "../../../../../public/image/instagram1.png"
+import instagram2 from "../../../../../public/image/instagram2.png"
+import instagram3 from "../../../../../public/image/instagram3.png"
+import instagram4 from "../../../../../public/image/instagram4.png"
+import instagram5 from "../../../../../public/image/instagram5.png"
+
 
 const InstagramSection = () => {
     return (
@@ -8,27 +14,27 @@ const InstagramSection = () => {
             <div className="grid gap-5 pb-8 md:grid-cols-5">
                 <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                     <a href="https://www.instagram.com/asafayet21/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
-                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src="https://i.ibb.co/D8h8yPY/d004cecb501dcd104c68f798162d8b94.jpg" alt="Louvre" />
+                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src={instagram1} alt="Louvre" />
                     </a>
                 </div>
                 <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                     <a href="https://www.instagram.com/asafayet21/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
-                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src="https://i.ibb.co/1RC5Jgn/00dfe802f348f69a618a6f4182ac6e19.jpg" alt="Louvre" />
+                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src={instagram2} alt="Louvre" />
                     </a>
                 </div>
                 <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                     <a href="https://www.instagram.com/asafayet21/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
-                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src="https://i.ibb.co/ctRc1Q7/6c0001dc5db56c31be7e82fbb0314376.jpg" alt="Louvre" />
+                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src={instagram5} alt="Louvre" />
                     </a>
                 </div>
                 <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                     <a href="https://www.instagram.com/asafayet21/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
-                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src="https://i.ibb.co/cK9kphj/4330a350cb839e3ef6cdd07fa8eac298.jpg" alt="Louvre" />
+                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src={instagram4} alt="Louvre" />
                     </a>
                 </div>
                 <div class="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                     <a href="https://www.instagram.com/asafayet21/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">
-                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src="https://i.ibb.co/9VVQnNt/e51156a0a1ac0c9487619cdcaef1bd67.jpg" alt="Louvre" />
+                        <img className="w-[330px] transition duration-300 ease-in-out hover:scale-110 h-[230px] mb-4 rounded-2xl" src={instagram3} alt="Louvre" />
                     </a>
                 </div>
             </div>

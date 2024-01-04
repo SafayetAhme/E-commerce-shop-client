@@ -1,9 +1,12 @@
-import React from 'react'
 
 const AdminHome = () => {
-    return (
-        <div>
 
+
+      
+
+    return (
+        <div className='flex gap-8'>
+            
         </div>
     )
 }

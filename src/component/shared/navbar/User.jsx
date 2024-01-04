@@ -6,7 +6,7 @@ import { FaUserPlus } from "react-icons/fa";
 
 const User = () => {
 
-    const user = true;
+    const user = false;
 
     return <div>
 

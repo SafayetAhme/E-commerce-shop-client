@@ -1,16 +1,48 @@
+import { useContext } from "react";
 import signin from "../../../../public/image/singin.png"
+import { AuthContext } from "../../provider/AuthProvider";
+import UseAuth from "../../hooks/UseAuth";
+
 
 
 const SignIn = () => {
+    // const { signIn } = useContext(AuthContext) || {};
+    const { signInWithGoogle } = UseAuth(null) || {};
 
-    const handlesignIn = e => {
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    };
+
+    const handlesignIn = (e) => {
         e.preventDefault();
-    }
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+        signIn(email, password)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                alert('Successful');
+                // Assuming 'navigate' and 'from' are defined somewhere in your code.
+                // navigate(from, { replace: true });
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+
 
     return (
-        <div className="grid h-screen py-20 gap-8 px-12 items-center md:grid-cols-2">
+        <div className="grid h-screen py-20 px-12 gap-10 items-center md:grid-cols-2">
             <div>
-                <img className=" w-full" src={signin} alt="" />
+                <img className="rounded-xl h-[750px]" src={signin} alt="" />
             </div>
             <section className="bg-gray-1 rounded-xl  shadow-2xl shadow-[#d5dadc] ...   dark:bg-dark lg:py-[10px]">
                 <div className="container mx-auto">
@@ -20,9 +52,9 @@ const SignIn = () => {
                                 <div className="mb-10 text-center md:mb-16">
                                     <a
                                         href="/#"
-                                        className="mx-auto inline-block max-w-[180px]"
+                                        className="mx-auto inline-block max-w-[160px]"
                                     >
-                                        <h1 className="text-3xl text-orange-500 font-extrabold">E-Shopping</h1>
+                                        <h1 className="text-3xl font-extrabold">Tour <span className="text-[#38dbe3]">Place</span> </h1>
                                     </a>
                                 </div>
 
@@ -44,13 +76,13 @@ const SignIn = () => {
                                         </label>
                                     </div>
                                     <div className="form-control mt-6">
-                                        <button className="w-full cursor-pointer rounded-md border bg-orange-500 border-ore50text-orange-500 hover:border-orange-500 shadow-lg shadow-orange-500/50 hover:bg-orange-500 px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90">Login</button>
+                                        <button className="w-full cursor-pointer rounded-md border bg-[#12D1E5] border-[#12D1E5] hover:border-[#04e6ff] shadow-lg shadow-cyan-500/50 hover:bg-[#04e6ff] px-5 py-3 text-base font-medium text-white transition hover:bg-opacity-90">Login</button>
                                     </div>
                                 </form>
                                 {/*  */}
 
                                 <p className="mb-6 text-base text-secondary-color dark:text-dark-7">
-                                    <div className="divider font-bold text-orange-500">Or</div>
+                                    <div className="divider font-bold text-[#12D1E5]">Or</div>
                                 </p>
                                 <ul className="-mx-2 mb-12 flex justify-between">
                                     <li className="w-full px-2">
@@ -73,7 +105,7 @@ const SignIn = () => {
                                         </a>
                                     </li>
 
-                                    <li className="w-full px-2">
+                                    <li onClick={handleGoogleSignIn} className="w-full px-2">
                                         <a
 
                                             className="flex h-11 items-center justify-center rounded-md bg-[#0a7917] hover:bg-opacity-90"
@@ -97,7 +129,7 @@ const SignIn = () => {
                                     <span className="pr-0.5">Don't have any account? </span>
                                     <a
                                         href="/signup"
-                                        className="text-orange-500 font-bold underline"
+                                        className="text-[#4ab9c3] font-bold underline"
                                     >
                                         Sign Up
                                     </a>
@@ -107,8 +139,9 @@ const SignIn = () => {
                     </div>
                 </div>
             </section>
+
         </div>
     )
 }
 
-export default SignIn
+export default SignIn;

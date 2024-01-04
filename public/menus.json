@@ -1,0 +1,52 @@
+[
+    {
+        "category": "shirt",
+        "image": [
+            "https://i.ibb.co/VB4JcTv/2.jpg",
+            "https://i.ibb.co/VB4JcTv/2.jpg",
+            "https://i.ibb.co/VB4JcTv/2.jpg",
+            "https://i.ibb.co/VB4JcTv/2.jpg"
+        ],
+        "name": "Alice Williams",
+        "price": "49.99",
+        "title": "Adobe Illustrator Masterclass",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi necessitatibus illo omnis delectus. Quisquam culpa, quibusdam eos a iste ipsum quaerat amet nemo totam nisi natus ad quia facilis ducimus doloremque expedita veniam cum quidem quis at dolores tempora voluptatum voluptatem? Temporibus, eaque soluta esse molestias nam aliquid, modi quasi nostrum perferendis rem quidem voluptas animi aspernatur magni nisi",
+        "ratting": "3",
+        "total": 1070,
+        "customerreview": [
+            {
+                "profileimg": "",
+                "name": "Safayet ahmed",
+                "ratting": "3",
+                "description": "This is the best product that i found from they. they are best seller in this country",
+                "date": "04/01/2024"
+            }
+        ],
+        "shirt": [
+            {
+                "category": "shirt",
+                "image": [
+                    "https://i.ibb.co/VB4JcTv/2.jpg",
+                    "https://i.ibb.co/VB4JcTv/2.jpg",
+                    "https://i.ibb.co/VB4JcTv/2.jpg",
+                    "https://i.ibb.co/VB4JcTv/2.jpg"
+                ],
+                "name": "Alice Williams",
+                "price": "49.99",
+                "title": "Adobe Illustrator Masterclass",
+                "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi necessitatibus illo omnis delectus. Quisquam culpa, quibusdam eos a iste ipsum quaerat amet nemo totam nisi natus ad quia facilis ducimus doloremque expedita veniam cum quidem quis at dolores tempora voluptatum voluptatem? Temporibus, eaque soluta esse molestias nam aliquid, modi quasi nostrum perferendis rem quidem voluptas animi aspernatur magni nisi",
+                "ratting": "3",
+                "total": 1070,
+                "customerreview": [
+                    {
+                        "profileimg": "",
+                        "name": "Safayet ahmed",
+                        "ratting": "3",
+                        "description": "This is the best product that i found from they. they are best seller in this country",
+                        "date": "04/01/2024"
+                    }
+                ]
+            }
+        ]
+    }
+]

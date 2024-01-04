@@ -1,7 +1,17 @@
 import signin from "../../../../public/image/signup.png"
+import UseAuth from "../../hooks/UseAuth";
 
 
 const SignUp = () => {
+
+    const {googleSignIn} = UseAuth() || [];
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then((result) => {
+                console.log(result.user);
+            })
+    };
 
     const handlecreateUser = e => {
         e.preventDefault();
@@ -82,7 +92,7 @@ const SignUp = () => {
                                     </div>
                                     <div className="w-full px-2">
                                         <li>
-                                            <a
+                                            <a onClick={handleGoogleSignIn}
 
                                                 className="flex h-11 items-center justify-center rounded-md bg-[#0a7917] hover:bg-opacity-90"
                                             >
