@@ -29,7 +29,9 @@ const CapCollection = () => {
                         cap.map(item =>
 
                             <div key={item.id} className="">
-                                <img className="w-full h-[284px] rounded-xl" src={item.image} alt="" />
+                                <Link to={`/menusdetails/${item._id}`}>
+                                    <img className="w-full  h-[284px] rounded-xl" src={item.image} alt="" />
+                                </Link>
                                 <div>
                                     <h1 className="text-xl font-bold">{item.name}</h1>
                                     <div className="flex items-center justify-between">
@@ -42,7 +44,6 @@ const CapCollection = () => {
                             </div>
                         )
                     }
-
                 </div>
             </div>
         </div>

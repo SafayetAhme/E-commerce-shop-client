@@ -20,7 +20,9 @@ const BlogSection = () => {
                 {
                     blog.map(item =>
                         <div key={item.id} className="">
-                            <img className="w-full h-[260px] rounded-xl" src={item.image1} alt="" />
+                            <Link to={`/blogdetails/${item._id}`}>
+                                <img className="w-full  h-[260px] rounded-xl" src={item.image1} alt="" />
+                            </Link>
                             <div>
                                 <div className="flex gap-8 pt-4">
                                     <div className="flex items-center gap-2">

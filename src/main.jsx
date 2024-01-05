@@ -25,6 +25,7 @@ import {
 } from '@tanstack/react-query'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import MenusDetails from './component/page/MenusDetails.jsx/MenusDetails.jsx';
+import BlogDetails from './component/page/blog/BlogDetails.jsx';
 
 const queryClient = new QueryClient()
 
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>
+      },
+      {
+        path: "/blogdetails/:id",
+        element: <BlogDetails></BlogDetails>,
+        loader: () => fetch('http://localhost:5000/blogs')
       },
       {
         path: "/aboutus",

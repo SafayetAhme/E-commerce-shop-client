@@ -113,7 +113,9 @@ const Shop = () => {
                             {
                                 menus.map(item =>
                                     <div className="">
-                                        <img className="w-full rounded-xl" src={item.image} alt="" />
+                                        <Link to={`/menusdetails/${item._id}`}>
+                                            <img className="w-full rounded-xl" src={item.image} alt="" />
+                                        </Link>
                                         <div>
                                             <h1 className="text-xl font-bold">{item.name}</h1>
                                             <div className="flex pt-2 pb-1 justify-between">

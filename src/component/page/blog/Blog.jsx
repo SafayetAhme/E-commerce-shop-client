@@ -25,7 +25,9 @@ const Blog = () => {
                         <div key={item.id} data-aos="fade-up"
                             data-aos-anchor-placement="top-center" className=''>
                             <div className="">
-                                <img className="w-full h-[260px] rounded-xl" src={item.image1} alt="" />
+                            <Link to={`/blogdetails/${item._id}`}>
+                                <img className="w-full  h-[260px] rounded-xl" src={item.image1} alt="" />
+                            </Link>
                                 <div>
                                     <div className="flex gap-8 pt-4">
                                         <div className="flex items-center gap-2">
