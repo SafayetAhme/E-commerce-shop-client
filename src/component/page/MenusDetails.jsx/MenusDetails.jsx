@@ -16,21 +16,65 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { GoCheckbox } from "react-icons/go";
 import FronInDetails from "./FronInDetails";
+import UseAuth from "../../hooks/UseAuth";
+import UserAxiosSecure from "../../hooks/UserAxiosSecure";
 
 
 const MenusDetails = () => {
-    const [category, setCategory] = useState();
+    const { user } = UseAuth();
+    const axiosSecure = UserAxiosSecure();
     const [selectedQuantity, setSelectedQuantity] = useState(1);
     const [tabIndex, setTabIndex] = useState(0)
     const menusdetails = useLoaderData();
-    if(menusdetails?.category === "shirt"){
-        const shirt = menusdetails.filter(item => item.category === 'shirt');
-        setCategory(shirt)
-    }
     const { id } = useParams();
     const menusdetail = menusdetails.find(menusdetail => menusdetail._id === id);
     console.log(menusdetail)
-    
+
+
+    const handleaddtocart = () => {
+        if (user && user.email) {
+            // TODO: wow
+            console.log(user.email);
+            const addtocartitem = {
+                menuId: menusdetail?._id,
+                email: user?.email,
+                image: menusdetail?.image,
+                price: menusdetail?.price,
+                name: menusdetail?.name,
+                title: menusdetail?.title,
+            }
+
+            axiosSecure.post('/addtocart', addtocartitem)
+                .then(res => {
+                    console.log(res.data)
+                    if (res.data.insertedId) {
+                        alert("nice")
+                        refetch()
+                    }
+                })
+                .catch(error => {
+                    console.log(error)
+                })
+        }
+        else {
+            Swal.fire({
+                title: "if you want to add item please login",
+                text: "please",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Sign In"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    //   toto
+                    // nagigate("/signin", { state: { from: location } })
+                }
+            });
+        }
+    }
+
+
 
     return (
         <div
@@ -96,7 +140,7 @@ const MenusDetails = () => {
 
                     <div className="flex items-center gap-2 pt-8">
                         <button data-tip="Love" className="text-xl tooltip border-2 px-3 py-3 hover:border-black hover:bg-black hover:text-white font-rubik"><FaRegHeart /></button>
-                        <button className="text-xl border-2 px-16 py-2 hover:border-black hover:bg-black hover:text-white font-rubik">Add to Cart</button>
+                        <button onClick={() => handleaddtocart(menusdetail)} className="text-xl border-2 px-16 py-2 hover:border-black hover:bg-black hover:text-white font-rubik">Add to Cart</button>
                         <button className="text-xl border-2 px-16 py-2 border-black hover:border-black bg-black text-white font-rubik">Buy Now</button>
                     </div>
                     <hr className="mt-6" />
@@ -190,15 +234,15 @@ const MenusDetails = () => {
                 <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <div className="grid md:grid-cols-4 gap-6 pt-6 pb-12 items-center">
                     {
-                        category?.map(item =>
-                            <div key={item.id}>
-                                <Link to={`/menusdetails/${item._id}`}>
-                                    <img className="w-full rounded-xl" src={item.image} alt="" />
+                        menusdetail.shirt.map(detail =>
+                            <div key={detail.id}>
+                                <Link to={`/menusdetails/${detail?._id}`}>
+                                    <img className="w-full rounded-xl" src={detail.image} alt="" />
                                 </Link>
                                 <div>
-                                    <h1 className="text-xl font-bold">{item.name}</h1>
+                                    <h1 className="text-xl font-bold">{detail.name}</h1>
                                     <div className="flex items-center justify-between">
-                                        <h1 className="text-lg font-bold">${item.price}</h1>
+                                        <h1 className="text-lg font-bold">${detail.price}</h1>
                                         <div className=" bg-[#edededb1] p-3 rounded-full left-14 ">
                                             <LuShoppingCart />
                                         </div>

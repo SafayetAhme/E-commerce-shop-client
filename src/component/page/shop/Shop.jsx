@@ -9,6 +9,7 @@ import UseMenus from "../../hooks/UseMenus";
 
 const Shop = () => {
     const [menus] = UseMenus();
+    
 
     return (
         <div className="container mx-auto">
@@ -37,44 +38,102 @@ const Shop = () => {
                         </div>
                     </form>
 
+                    {/* Price */}
                     <div className="pt-6">
                         <h1 className="font-rubik text-lg pb-3  font-bold">Price</h1>
-                        <h1 className="font-rubik text-base hover:underline pb-2 text-gray-600 font-bold">40-60</h1>
-                        <h1 className="font-rubik text-base hover:underline pb-2 text-gray-600 font-bold">60-80</h1>
-                        <h1 className="font-rubik text-base hover:underline pb-2 text-gray-600 font-bold">80-100</h1>
-                        <h1 className="font-rubik text-base hover:underline pb-2 text-gray-600 font-bold">100-120</h1>
-                        <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">120-200</h1>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">40-60</h1>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">60-80</h1>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">80-100</h1>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">100-120</h1>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">120-200</h1>
+                        </div>
                     </div>
 
+                    {/* category */}
                     <div className="pt-6">
                         <h1 className="font-rubik text-lg pb-3 font-bold">Categories</h1>
-                        <h1 className="font-rubik text-base hover:underline pb-2 text-gray-600 font-bold">Caps</h1>
-                        <h1 className="font-rubik text-base hover:underline pb-2 text-gray-600 font-bold">Begs</h1>
-                        <h1 className="font-rubik text-base hover:underline pb-2 text-gray-600 font-bold">T-shirt</h1>
-                        <h1 className="font-rubik text-base hover:underline pb-2 text-gray-600 font-bold">Shirt</h1>
-                        <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">Hoodie</h1>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">Caps</h1>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">Begs</h1>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">T-shirt</h1>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">Shirt</h1>
+                        </div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <h1 className="font-rubik text-base hover:underline text-gray-600 font-bold">Hoodie</h1>
+                        </div>
                     </div>
 
+                    {/* star */}
                     <div className="pt-6">
                         <h1 className="font-rubik text-lg pb-3 font-bold">Star</h1>
                         <div class="flex items-center mb-4">
-                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">5 star</label>
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <label for="default-radio-1" class="font-rubik text-base hover:underline text-gray-600 rating font-bold pl-2">
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            </label>
                         </div>
                         <div class="flex items-center mb-4">
-                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">5 star</label>
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 rating text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <label for="default-radio-1" class="font-rubik text-base hover:underline text-gray-600 rating font-bold pl-2" >
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            </label>
                         </div>
                         <div class="flex items-center mb-4">
-                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">5 star</label>
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <label for="default-radio-1" class="font-rubik text-base hover:underline text-gray-600 rating font-bold pl-2" >
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            </label>
                         </div>
                         <div class="flex items-center mb-4">
-                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">5 star</label>
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <label for="default-radio-1" class="font-rubik text-base hover:underline text-gray-600 rating font-bold pl-2" >
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            </label>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <label for="default-radio-1" class="font-rubik text-base hover:underline text-gray-600 rating font-bold pl-2" >
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            </label>
                         </div>
                     </div>
 
+                    {/* size */}
                     <div className="pt-6">
                         <h1 className="font-rubik text-lg pb-3 font-bold">Size</h1>
                         <button className="border mr-2 px-4 py-1 font-medium hover:bg-black hover:text-white">XL</button>
@@ -85,6 +144,7 @@ const Shop = () => {
                     </div>
                 </div>
 
+                {/*  */}
                 <div className="col-span-3 pl-8 pt-2">
                     <div className=" flex items-center h-fit justify-between ">
                         <div className="flex items-center gap-2">

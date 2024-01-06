@@ -1,41 +1,41 @@
 import { useContext } from "react";
 import signin from "../../../../public/image/singin.png"
 import { AuthContext } from "../../provider/AuthProvider";
-import UseAuth from "../../hooks/UseAuth";
-
 
 
 const SignIn = () => {
-    // const { signIn } = useContext(AuthContext) || {};
-    const { signInWithGoogle } = UseAuth(null) || {};
 
-    const handleGoogleSignIn = () => {
-        signInWithGoogle()
-            .then(result => {
-                console.log(result.user);
-            })
-            .catch(error => {
-                console.error(error)
-            })
-    };
+    const { signIn, signInWithGoogle } = useContext(AuthContext)
 
-    const handlesignIn = (e) => {
+    const handlesignIn = e => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
-        signIn(email, password)
-            .then((result) => {
+        const name = form.name.value;
+        console.log(email, password, name)
+        signIn(email, password, name)
+            .then(result => {
                 const user = result.user;
                 console.log(user);
-                alert('Successful');
-                // Assuming 'navigate' and 'from' are defined somewhere in your code.
-                // navigate(from, { replace: true });
+                alert("ncie")
             })
-            .catch((error) => {
-                console.error(error);
-            });
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                alert("ncie")
+            })
+            .catch(error => {
+                console.log(error)
+            })
     };
 
 
@@ -52,9 +52,9 @@ const SignIn = () => {
                                 <div className="mb-10 text-center md:mb-16">
                                     <a
                                         href="/#"
-                                        className="mx-auto inline-block max-w-[160px]"
+                                        className="mx-auto inline-block max-w-[180px]"
                                     >
-                                        <h1 className="text-3xl font-extrabold">Tour <span className="text-[#38dbe3]">Place</span> </h1>
+                                       <h1 className="text-3xl font-extrabold text-orange-500">E-Shopping</h1>
                                     </a>
                                 </div>
 
@@ -105,8 +105,8 @@ const SignIn = () => {
                                         </a>
                                     </li>
 
-                                    <li onClick={handleGoogleSignIn} className="w-full px-2">
-                                        <a
+                                    <li className="w-full px-2">
+                                        <a onClick={handleGoogleSignIn}
 
                                             className="flex h-11 items-center justify-center rounded-md bg-[#0a7917] hover:bg-opacity-90"
                                         >
@@ -139,7 +139,6 @@ const SignIn = () => {
                     </div>
                 </div>
             </section>
-
         </div>
     )
 }

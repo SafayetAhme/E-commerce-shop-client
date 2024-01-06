@@ -19,57 +19,62 @@
                 "ratting": "3",
                 "description": "This is the best product that i found from they. they are best seller in this country",
                 "date": "04/01/2024"
-            }
-        ],
-        "shirt": [
-            {
-                "category": "shirt",
-                "image": [
-                    "https://i.ibb.co/6FnVn7B/bb7d801317ad5036eabbd369b44b70cc.jpg",
-                    "https://i.ibb.co/ftfjTKt/147aa4af52ce33eeae58a79209bc960d.jpg",
-                    "https://i.ibb.co/SKX9nSr/27425f2f5d1c0b486ba6173069cc2623.jpg",
-                    "https://i.ibb.co/rxbNGZs/b84530478e68ff2d158cb2fbe2f142f9.jpg"
-                ],
-                "name": "Half Sleeve Shirts",
-                "price": "59.99",
-                "title": "Adobe Illustrator Masterclass",
-                "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi necessitatibus illo omnis delectus. Quisquam culpa, quibusdam eos a iste ipsum quaerat amet nemo totam nisi natus ad quia facilis ducimus doloremque expedita veniam cum quidem quis at dolores tempora voluptatum voluptatem? Temporibus, eaque soluta esse molestias nam aliquid, modi quasi nostrum perferendis rem quidem voluptas animi aspernatur magni nisi",
-                "ratting": "5",
-                "customerreview": [
-                    {
-                        "profileimg": "",
-                        "name": "Safayet ahmed",
-                        "ratting": "2",
-                        "description": "This is the best product that i found from they. they are best seller in this country",
-                        "date": "04/01/2024"
-                    }
-                ]
             },
             {
-                "category": "shirt",
-                "image": [
-                    "https://i.ibb.co/ftfjTKt/147aa4af52ce33eeae58a79209bc960d.jpg",
-                    "https://i.ibb.co/6FnVn7B/bb7d801317ad5036eabbd369b44b70cc.jpg",
-                    "https://i.ibb.co/SKX9nSr/27425f2f5d1c0b486ba6173069cc2623.jpg",
-                    "https://i.ibb.co/rxbNGZs/b84530478e68ff2d158cb2fbe2f142f9.jpg"
-                ],
-                "name": "Half Sleeve Shirts",
-                "price": "22.99",
-                "title": "Adobe Illustrator Masterclass",
-                "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi necessitatibus illo omnis delectus. Quisquam culpa, quibusdam eos a iste ipsum quaerat amet nemo totam nisi natus ad quia facilis ducimus doloremque expedita veniam cum quidem quis at dolores tempora voluptatum voluptatem? Temporibus, eaque soluta esse molestias nam aliquid, modi quasi nostrum perferendis rem quidem voluptas animi aspernatur magni nisi",
-                "ratting": "4",
-                "customerreview": [
-                    {
-                        "profileimg": "",
-                        "name": "Safayet ahmed",
-                        "ratting": "3",
-                        "description": "This is the best product that i found from they. they are best seller in this country",
-                        "date": "04/01/2024"
-                    }
-                ]
+                "profileimg": "",
+                "name": "Rakibull Hasan",
+                "ratting": "3",
+                "description": "This is the best product that i found from they. they are best seller in this country",
+                "date": "04/01/2024"
             }
         ]
     },
+    {
+        "category": "shirt",
+        "image": [
+            "https://i.ibb.co/6FnVn7B/bb7d801317ad5036eabbd369b44b70cc.jpg",
+            "https://i.ibb.co/ftfjTKt/147aa4af52ce33eeae58a79209bc960d.jpg",
+            "https://i.ibb.co/SKX9nSr/27425f2f5d1c0b486ba6173069cc2623.jpg",
+            "https://i.ibb.co/rxbNGZs/b84530478e68ff2d158cb2fbe2f142f9.jpg"
+        ],
+        "name": "Half Sleeve Shirts",
+        "price": "59.99",
+        "title": "Adobe Illustrator Masterclass",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi necessitatibus illo omnis delectus. Quisquam culpa, quibusdam eos a iste ipsum quaerat amet nemo totam nisi natus ad quia facilis ducimus doloremque expedita veniam cum quidem quis at dolores tempora voluptatum voluptatem? Temporibus, eaque soluta esse molestias nam aliquid, modi quasi nostrum perferendis rem quidem voluptas animi aspernatur magni nisi",
+        "ratting": "5",
+        "customerreview": [
+            {
+                "profileimg": "",
+                "name": "Safayet ahmed",
+                "ratting": "2",
+                "description": "This is the best product that i found from they. they are best seller in this country",
+                "date": "04/01/2024"
+            }
+        ]
+    },
+    {
+        "category": "shirt",
+        "image": [
+            "https://i.ibb.co/ftfjTKt/147aa4af52ce33eeae58a79209bc960d.jpg",
+            "https://i.ibb.co/6FnVn7B/bb7d801317ad5036eabbd369b44b70cc.jpg",
+            "https://i.ibb.co/SKX9nSr/27425f2f5d1c0b486ba6173069cc2623.jpg",
+            "https://i.ibb.co/rxbNGZs/b84530478e68ff2d158cb2fbe2f142f9.jpg"
+        ],
+        "name": "Half Sleeve Shirts",
+        "price": "22.99",
+        "title": "Adobe Illustrator Masterclass",
+        "details": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi necessitatibus illo omnis delectus. Quisquam culpa, quibusdam eos a iste ipsum quaerat amet nemo totam nisi natus ad quia facilis ducimus doloremque expedita veniam cum quidem quis at dolores tempora voluptatum voluptatem? Temporibus, eaque soluta esse molestias nam aliquid, modi quasi nostrum perferendis rem quidem voluptas animi aspernatur magni nisi",
+        "ratting": "4",
+        "customerreview": [
+            {
+                "profileimg": "",
+                "name": "Safayet ahmed",
+                "ratting": "3",
+                "description": "This is the best product that i found from they. they are best seller in this country",
+                "date": "04/01/2024"
+            }
+        ]
+    }
     {
         "category": "shirt",
         "image": [
@@ -299,7 +304,14 @@
         "customerreview": [
             {
                 "profileimg": "",
-                "name": "Riphon Hasan",
+                "name": "Safayet ahmed",
+                "ratting": "3",
+                "description": "This is the best product that i found from they. they are best seller in this country",
+                "date": "04/01/2024"
+            },
+            {
+                "profileimg": "",
+                "name": "Rakibull Hasan",
                 "ratting": "3",
                 "description": "This is the best product that i found from they. they are best seller in this country",
                 "date": "04/01/2024"

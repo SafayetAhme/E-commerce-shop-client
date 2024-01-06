@@ -26,8 +26,13 @@ import {
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import MenusDetails from './component/page/MenusDetails.jsx/MenusDetails.jsx';
 import BlogDetails from './component/page/blog/BlogDetails.jsx';
+import AuthProvider from './component/provider/AuthProvider.jsx';
+import AddtoCart from './component/page/addtocart/AddtoCart.jsx';
+import Addtowishlist from './component/page/addtowishlist/Addtowishlist.jsx';
 
 const queryClient = new QueryClient()
+
+
 
 const router = createBrowserRouter([
   {
@@ -42,6 +47,14 @@ const router = createBrowserRouter([
         path: "/menusdetails/:id",
         element: <MenusDetails></MenusDetails>,
         loader: () => fetch('http://localhost:5000/menus')
+      },
+      {
+        path: "/addtocart",
+        element: <AddtoCart></AddtoCart>
+      },
+      {
+        path: "/addtowishlist",
+        element: <Addtowishlist></Addtowishlist>
       },
       {
         path: "/shop",
@@ -129,8 +142,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
+    <AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </AuthProvider>
   </React.StrictMode>,
 )

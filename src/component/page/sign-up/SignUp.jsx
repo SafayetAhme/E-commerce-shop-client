@@ -1,26 +1,47 @@
-import signin from "../../../../public/image/signup.png"
-import UseAuth from "../../hooks/UseAuth";
-
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import React from 'react';
+import signupimg from "../../../../public/image/signupimg.png"
 
 const SignUp = () => {
 
-    const {googleSignIn} = UseAuth() || [];
-
-    const handleGoogleSignIn = () => {
-        googleSignIn()
-            .then((result) => {
-                console.log(result.user);
-            })
-    };
+    const { signup, signInWithGoogle } = useContext(AuthContext)
 
     const handlecreateUser = e => {
         e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        const name = form.name.value;
+        console.log(email, password, name)
+        signup(email, password, name)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                alert("ncie")
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
+
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                alert("ncie")
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    };
 
     return (
         <div className="grid h-screen py-20 px-12 gap-10 items-center md:grid-cols-2">
             <div>
-                <img className="rounded-xl h-[750px]" src={signin} alt="" />
+                <img className="rounded-xl h-[750px]" src={signupimg} alt="" />
             </div>
             <section className="bg-gray-1 rounded-xl  shadow-2xl shadow-[#d5dadc] ...   dark:bg-dark lg:py-[10px]">
                 <div className="container mx-auto">
