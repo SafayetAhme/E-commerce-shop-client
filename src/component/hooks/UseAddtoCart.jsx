@@ -5,16 +5,16 @@ import UseAxiosPublic from "./UseAxiosPublic";
 
 
 const UseAddtoCart = () => {
+    // const { user } = UseAuth();
     const axiosPublic = UseAxiosPublic();
-    const { user } = UseAuth();
-    const { refetch, data: addcart = [] } = useQuery({
-        queryKey: ['addcart', user?.email],
+    const { data: addcart = [] } = useQuery({
+        queryKey: ['addcart'],
         queryFn: async () => {
-            const res = await axiosPublic.get(`/addtocart?email=${user.email}`);
+            const res = await axiosPublic.get('/addtocart');
             return res.data;
         }
     })
-    return [addcart, refetch]
+    return [addcart]
 }
 
 export default UseAddtoCart;

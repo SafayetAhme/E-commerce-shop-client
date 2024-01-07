@@ -49,7 +49,6 @@ const MenusDetails = () => {
                     console.log(res.data)
                     if (res.data.insertedId) {
                         alert("nice")
-                        refetch()
                     }
                 })
                 .catch(error => {
@@ -139,7 +138,7 @@ const MenusDetails = () => {
                     </div>
 
                     <div className="flex items-center gap-2 pt-8">
-                        <button data-tip="Love" className="text-xl tooltip border-2 px-3 py-3 hover:border-black hover:bg-black hover:text-white font-rubik"><FaRegHeart /></button>
+                        <button onClick={() => handleaddtocart(menusdetail)} data-tip="Love" className="text-xl tooltip border-2 px-3 py-3 hover:border-black hover:bg-black hover:text-white font-rubik"><FaRegHeart /></button>
                         <button onClick={() => handleaddtocart(menusdetail)} className="text-xl border-2 px-16 py-2 hover:border-black hover:bg-black hover:text-white font-rubik">Add to Cart</button>
                         <button className="text-xl border-2 px-16 py-2 border-black hover:border-black bg-black text-white font-rubik">Buy Now</button>
                     </div>

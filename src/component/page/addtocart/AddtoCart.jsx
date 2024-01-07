@@ -3,18 +3,18 @@ import UserAxiosSecure from "../../hooks/UserAxiosSecure";
 
 
 const AddtoCart = () => {
-    // const [menus] = UseAddtoCart();
-    // console.log(menus)
-    // const totalPrice = menus.reduce((total, item) => total + parseFloat(item.price), 0);
-    // const axiosSecure = UserAxiosSecure();
+    const [menus] = UseAddtoCart();
+    console.log(menus)
+    const totalPrice = menus.reduce((total, item) => total + parseFloat(item.price), 0);
+    const axiosSecure = UserAxiosSecure();
 
     return (
         <div>
-            {/* <div className="flex justify-between w-full">
+            <div className="flex justify-between w-full">
                 <th className="font-bold text-xl text-blue-600">Your Total items: {menus.length}</th>
                 <th>Your Total Price ${totalPrice}</th>
                 <p>{totalPrice}</p>
-            </div> */}
+            </div>
             {/* <div className="pt-8">
                 {
                     menus.map((item, index) => <div key={item._id} className="flex justify-between">
