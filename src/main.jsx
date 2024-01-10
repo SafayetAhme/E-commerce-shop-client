@@ -29,6 +29,8 @@ import BlogDetails from './component/page/blog/BlogDetails.jsx';
 import AuthProvider from './component/provider/AuthProvider.jsx';
 import AddtoCart from './component/page/addtocart/AddtoCart.jsx';
 import Addtowishlist from './component/page/addtowishlist/Addtowishlist.jsx';
+import Edit from './component/page/admindashboard/Edit.jsx';
+import Additem from './component/page/admindashboard/Additem.jsx';
 
 const queryClient = new QueryClient()
 
@@ -133,6 +135,14 @@ const router = createBrowserRouter([
       {
         path: "manageitem",
         element: <ManageItems></ManageItems>
+      },
+      {
+        path: "edit",
+        element: <Edit></Edit>
+      },
+      {
+        path: "additem",
+        element: <Additem></Additem>
       },
     ]
   }
